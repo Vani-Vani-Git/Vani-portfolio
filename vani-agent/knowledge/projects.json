@@ -1,0 +1,190 @@
+[
+  {
+    "id": "totp-authentication",
+    "name": "TOTP Authentication System",
+    "keywords": [
+      "totp",
+      "authentication",
+      "two factor",
+      "2fa",
+      "otp",
+      "flutter",
+      "spring boot",
+      "java",
+      "mysql",
+      "jwt",
+      "security"
+    ],
+    "summary": "A secure two-factor authentication system with a Flutter mobile client and Java 21 Spring Boot backend.",
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "Java 21",
+      "Spring Boot",
+      "Spring Security",
+      "MySQL",
+      "JPA/Hibernate",
+      "Flyway",
+      "JWT"
+    ],
+    "details": [
+      "The project implements TOTP-based authentication.",
+      "TOTP uses a 20-byte secret, Base32 encoding, HmacSHA1, 6-digit codes and a 30-second period.",
+      "The system supports TOTP enrollment and confirmation.",
+      "The system includes login, registration and OTP verification.",
+      "The system includes password recovery.",
+      "TOTP secrets are encrypted before storage.",
+      "The system includes replay protection for TOTP time steps.",
+      "The Flutter application includes login, registration, TOTP enrollment, OTP verification and password recovery screens."
+    ]
+  },
+  {
+    "id": "irisapi",
+    "name": "Iris Recognition Attendance System",
+    "keywords": [
+      "iris",
+      "irisapi",
+      "attendance",
+      "biometric",
+      "opencv",
+      "spring boot",
+      "java",
+      "mysql",
+      "student attendance"
+    ],
+    "summary": "A Spring Boot application that automates student attendance using iris recognition.",
+    "technologies": [
+      "Java 21",
+      "Spring Boot",
+      "Spring Web",
+      "Spring Data JPA",
+      "OpenCV",
+      "H2",
+      "Cloudinary",
+      "Lombok"
+    ],
+    "details": [
+      "The system processes captured images using OpenCV.",
+      "A Haar cascade is used for eye detection.",
+      "The largest detected eye is selected.",
+      "A central iris-like region is extracted.",
+      "The processed region is resized to 100 by 100.",
+      "Images are compared using an L2 norm.",
+      "The best matching dataset image is used to identify the student.",
+      "Attendance marking prevents duplicate attendance for the same student on the same date.",
+      "The system includes teacher authentication and attendance dashboard endpoints."
+    ]
+  },
+  {
+    "id": "visualdsa",
+    "name": "Interactive DSA Algorithm Visualization Platform",
+    "keywords": [
+      "visualdsa",
+      "dsa",
+      "data structures",
+      "algorithms",
+      "algorithm visualization",
+      "flutter",
+      "dart",
+      "sorting",
+      "searching",
+      "graph",
+      "tree"
+    ],
+    "summary": "An interactive educational platform for visualizing data structures and algorithms.",
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "Figma"
+    ],
+    "details": [
+      "The platform provides interactive algorithm and data-structure visualizations.",
+      "It includes array operations.",
+      "It includes linked lists.",
+      "It includes stacks and queues.",
+      "It includes binary trees and binary search trees.",
+      "It includes sorting and searching algorithms.",
+      "It includes graph traversal.",
+      "It includes Dijkstra.",
+      "It includes Prim's and Kruskal's minimum spanning tree algorithms.",
+      "It includes heap operations.",
+      "It includes a Huffman module.",
+      "The application includes visualization, animation and code-related components."
+    ]
+  },
+  {
+  "id": "isl-connect",
+  "name": "Indian Sign Language Translator",
+  "keywords": [
+    "isl",
+    "isl connect",
+    "sign language",
+    "indian sign language",
+    "machine learning",
+    "ml",
+    "mediapipe",
+    "lstm",
+    "react",
+    "python",
+    "accessibility"
+  ],
+  "summary": "An end-to-end Indian Sign Language recognition project with a live React frontend that translates signs into text and speech.",
+  "technologies": [
+    "Python",
+    "MediaPipe",
+    "LSTM",
+    "React"
+  ],
+  "model": {
+    "name": "Bidirectional LSTM with attention",
+    "description": "The inspected implementation contains two bidirectional LSTM layers followed by attention pooling and classification.",
+    "sequence_length": 30
+  },
+  "evaluation": {
+    "reported_metric": "validation accuracy",
+    "reported_value": "100%",
+    "source_context": "100% validation accuracy.",
+    "limitation": "The available documentation does not provide enough information about the validation setup to make a broader claim about real-world accuracy."
+  },
+  "details": [
+    "The current portfolio states that the project supports 50 sign/word classes.",
+    "The current portfolio states that the project uses 126 keypoints per frame.",
+    "The model works with 30-frame sequences.",
+    "MediaPipe is used for hand landmark extraction.",
+    "The application translates recognized signs into text and speech.",
+    "The project is live in production."
+  ]
+},
+  {
+    "id": "library-management",
+    "name": "Library Management System",
+    "keywords": [
+      "library",
+      "library management",
+      "books",
+      "book inventory",
+      "borrowing",
+      "spring boot",
+      "java",
+      "mysql",
+      "junit"
+    ],
+    "summary": "An enterprise-grade library management system developed using Java, Spring Boot and MySQL.",
+    "technologies": [
+      "Java",
+      "Spring Boot",
+      "MySQL"
+    ],
+    "details": [
+      "The system handles book inventory.",
+      "The system handles user accounts.",
+      "The system handles borrowing operations.",
+      "Database schemas were designed and implemented.",
+      "SQL scripts were written for database object creation and data manipulation.",
+      "Technical specifications were documented.",
+      "Unit tests were written using JUnit.",
+      "End-to-end system testing was performed."
+    ],
+    "knowledge_limit": "The original project source code is unavailable, so Vani must not invent specific controllers, APIs, database tables or internal implementation details."
+  }
+]

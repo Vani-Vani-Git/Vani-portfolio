@@ -1,0 +1,92 @@
+{
+  "name": "Vanitha Athiyappan",
+  "professional_title": "Associate Software Engineer",
+  "contact": {
+     "location": "Madurai",
+     "phone": "6379499082",
+     "email": "vanithaoffic@gmail.com",
+     "github": "https://github.com/Vani-Vani-Git",
+     "linkedin": "https://www.linkedin.com/in/vanitha-a-45a52a254"
+    },
+  "specialization": [
+    "Java",
+    "SQL",
+    "Full-Stack Development"
+  ],
+  "summary": "MCA candidate and Associate Software Engineer with hands-on experience in Java, Python, Spring Boot, REST APIs and SQL, backed by live project deployments and internship experience.",
+  "skills": {
+    "programming": [
+      "Java",
+      "Python",
+      "Dart"
+    ],
+    "frontend": [
+      "HTML",
+      "CSS",
+      "Flutter"
+    ],
+    "backend": [
+      "Spring Boot",
+      "RESTful APIs"
+    ],
+    "database": [
+      "MySQL",
+      "MongoDB",
+      "SQL"
+    ],
+    "cloud": [
+      "AWS fundamentals",
+      "n8n"
+    ],
+    "testing": [
+      "JUnit",
+      "Manual testing",
+      "Systematic test data creation"
+    ],
+    "tools": [
+      "Git",
+      "GitHub",
+      "Eclipse IDE",
+      "IntelliJ IDEA",
+      "Visual Studio Code",
+      "PyCharm"
+    ]
+  },
+  "education": [
+    {
+      "degree": "Master of Computer Applications",
+      "institution": "PSNA College of Engineering and Technology",
+      "period": "2024 - 2026",
+      "gpa": "85%"
+    },
+    {
+      "degree": "Bachelor of Computer Applications",
+      "institution": "The American College",
+      "period": "2020 - 2023",
+      "gpa": "85%"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Software Development Intern",
+      "company": "KV Technology Services",
+      "location": "Madurai",
+      "year": 2023
+    },
+    {
+      "role": "Advanced Software Engineering Virtual Intern",
+      "company": "Walmart Global Tech via Forage",
+      "year": 2025
+    }
+  ],
+  "achievements": [
+    "Deployed a live ML accessibility application for ISL to Text and Speech.",
+    "Consistent academic performance across MCA and BCA.",
+    "Completed the Walmart Global Tech Advanced Software Engineering Virtual Programme."
+  ],
+  "certifications": [
+    "NPTEL - Object-Oriented System Development using UML, Java and Patterns",
+    "IIT Bombay Spoken Tutorial - C++ Programming",
+    "Workshop - Machine Learning Using Python"
+  ]
+}

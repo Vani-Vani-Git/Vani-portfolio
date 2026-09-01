@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import DOLL_WAVE from "./assets/doll-wave.mp4";
 import DOLL_DESK from "./assets/doll-desk.png";
-import DOLL_PORTRAIT from "./assets/doll-portrait.webp";
 import DOLL_STUDY from "./assets/doll-study.png";
 
 import Slide1 from "./assets/1st image.png";
@@ -10,7 +9,6 @@ import Slide3 from "./assets/3rd image.png";
 import Slide4 from "./assets/4th image.png";
 import Slide5 from "./assets/5th image.png";
 import EXPERIENCE_DOLL from "./assets/experience-doll.png";
-import PROJECT_DOLL from "./assets/project-peek.png";
 import CONTACT_DOLL from "./assets/contact-doll.png";
 import TRACK_DOLL from "./assets/track-doll.png";
 /* =========================================================================
@@ -1787,7 +1785,6 @@ function Projects() {
         <div className="eyebrow">Selected Work</div>
         <div className="section-head"><h2>Five projects, taken from design to a working build.</h2></div>
         <div className="projects-showcase">
-          <img className="project-doll" src={PROJECT_DOLL} alt="" aria-hidden="true" />
           <div className="projects-grid">
           {PROJECTS.map((p) => (
             <div className={`project-card ${p.flagship ? "flagship" : ""}`} key={p.title}>

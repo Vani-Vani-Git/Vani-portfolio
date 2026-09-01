@@ -1931,7 +1931,7 @@ function ChatFab({ open, setOpen }) {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/api/chat",
+        "https://vani-personal-ai-backend.onrender.com",
         {
           method: "POST",
           headers: {

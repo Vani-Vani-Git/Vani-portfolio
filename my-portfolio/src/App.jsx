@@ -11,19 +11,7 @@ import Slide5 from "./assets/5th image.png";
 import EXPERIENCE_DOLL from "./assets/experience-doll.png";
 import CONTACT_DOLL from "./assets/contact-doll.png";
 import TRACK_DOLL from "./assets/track-doll.png";
-/* =========================================================================
-   EMBEDDED ASSETS (base64) — self-contained, no external files needed.
-   Swap these for real files (e.g. /assets/doll-wave.jpg) if you move this
-   into a bundled project like Vite — that will make the source much smaller.
-   ========================================================================= */
-/*const DOLL_WAVE = "./assets/doll-wave.jpg";
-const DOLL_DESK = "./assets/doll-desk.jpg";
-const DOLL_PORTRAIT = "./assets/doll-portrait.webp";
-const Slide1 = "./assets/1st image.png";
-const Slide2 = "./assets/2nd image.png";
-const Slide3 = "./assets/3rd image.png";
-const Slide4 = "./assets/4th image.png";
-const Slide5 = "./assets/5th image.png";*/
+
 const ICON_BASE = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
 
 const SKILLS = [
@@ -843,10 +831,10 @@ section{ position:relative; padding:120px 0; }
 }
 .contact-doll{
   position:absolute;
-  z-index:0;
-  left:5px;
-  bottom:-4px;
-  width:min(285px,23vw);
+  z-index:2;
+  left:10px;
+  bottom:200px;
+  width:min(225px,18vw);
   height:auto;
   object-fit:contain;
   pointer-events:none;
@@ -1423,7 +1411,625 @@ footer{ padding:34px 0; text-align:center; color:var(--muted-2); font-family:'Je
   }
 }
 
-@media (max-width:640px){ .container{ padding:0 20px; } section{ padding:80px 0; } .hero-stats{ gap:28px; } }`;
+@media (max-width:640px){ .container{ padding:0 20px; } section{ padding:80px 0; } .hero-stats{ gap:28px; } }
+/* ==================================================
+   FINAL RESPONSIVE / MOBILE LAYOUT FIXES
+   ================================================== */
+
+/* Prevent accidental width overflow while keeping content reflowable. */
+.vp-root{
+  width:100%;
+  min-width:0;
+  overflow-x:hidden;
+}
+
+@media (max-width:900px){
+
+  /* ---------- GLOBAL CONTAINER ---------- */
+
+  .container{
+    width:100%;
+    max-width:none;
+    box-sizing:border-box;
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  /* ---------- NAV ---------- */
+
+  .nav-inner{
+    width:100%;
+    box-sizing:border-box;
+    padding-left:20px;
+    padding-right:20px;
+    height:60px;
+  }
+
+  .brand{
+    font-size:18px;
+  }
+
+  .nav-cta{
+    padding:8px 14px;
+    font-size:11px;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero{
+    min-height:auto;
+    padding-top:90px;
+    padding-bottom:70px;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+    text-align:center;
+  }
+
+  .hero-grid > div:first-child{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    min-width:0;
+  }
+
+  .hero-kicker{
+    justify-content:center;
+    font-size:10px;
+    letter-spacing:.10em;
+    margin-bottom:18px;
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:clamp(42px,12vw,60px);
+    line-height:1;
+  }
+
+  .hero-role{
+    width:100%;
+    max-width:520px;
+    font-size:15px;
+    line-height:1.65;
+    margin-top:18px;
+  }
+
+  .hero-actions{
+    width:100%;
+    justify-content:center;
+    margin-top:28px;
+    gap:10px;
+  }
+
+  .btn{
+    padding:13px 18px;
+    font-size:11px;
+  }
+
+  .hero-stats{
+    width:100%;
+    justify-content:center;
+    gap:24px;
+    flex-wrap:wrap;
+    margin-top:38px;
+  }
+
+  .hero-stat{
+    min-width:70px;
+  }
+
+  .hero-stat b{
+    font-size:26px;
+  }
+
+  .hero-stat span{
+    font-size:9px;
+  }
+
+
+  /* ---------- HERO VISUAL ---------- */
+
+  .hero-visual{
+    width:100%;
+    min-height:auto;
+    height:auto;
+    margin-top:0;
+  }
+
+  .hero-visual-frame{
+    width:min(100%,420px);
+    max-width:420px;
+    aspect-ratio:4/3;
+  }
+
+  .hero-know-more{
+    margin-top:14px;
+    font-size:11px;
+  }
+
+
+  /* ---------- SECTION HEADINGS ---------- */
+
+  .section-head{
+    width:100%;
+    min-width:0;
+    margin-bottom:42px;
+  }
+
+  .section-head h2{
+    font-size:clamp(30px,9vw,42px);
+    line-height:1.1;
+  }
+
+  .section-head p{
+    font-size:14px;
+    line-height:1.7;
+  }
+
+
+  /* ---------- TRACK RECORD ---------- */
+
+  .reveal-section{
+    min-height:auto;
+    padding:70px 0;
+  }
+
+  .reveal-sticky{
+    position:relative;
+    height:auto;
+    min-height:auto;
+    overflow:visible;
+  }
+
+  .track-record-layout{
+    width:calc(100% - 40px);
+    max-width:680px;
+    min-height:auto;
+    grid-template-columns:1fr;
+    gap:30px;
+    padding:20px 0;
+  }
+
+  .track-record-art{
+    height:auto;
+    order:-1;
+  }
+
+  .track-record-art img{
+    width:min(250px,68vw);
+    max-height:340px;
+  }
+
+  .reveal-heading{
+    text-align:center;
+  }
+
+  .reveal-heading h2{
+    font-size:clamp(28px,7vw,36px) !important;
+    line-height:1.12;
+  }
+
+  .reveal-cards{
+    gap:16px;
+  }
+
+  .reveal-card,
+  .reveal-card-inner,
+  .reveal-card-front,
+  .reveal-card-back{
+    min-height:150px;
+  }
+
+  .reveal-card-back{
+    padding:20px;
+  }
+
+  .reveal-card-back p{
+    font-size:14px;
+    line-height:1.6;
+  }
+
+
+  /* ---------- ABOUT ---------- */
+
+  .about-wrap{
+    grid-template-columns:1fr;
+    gap:40px;
+    text-align:center;
+  }
+
+  .about-copy{
+    min-width:0;
+  }
+
+  .about-copy p{
+    font-size:14px;
+    line-height:1.75;
+  }
+
+
+  /* ---------- SKILLS ---------- */
+
+  .skills-cats{
+    grid-template-columns:1fr 1fr;
+    gap:28px 16px;
+  }
+
+  .skill-cat{
+    min-width:0;
+  }
+
+  .skill-tags{
+    gap:8px;
+  }
+
+  .skill-tag{
+    min-width:0;
+    width:calc(50% - 4px);
+    min-height:92px;
+    box-sizing:border-box;
+  }
+
+
+  /* ---------- EXPERIENCE ---------- */
+
+  .experience-layout{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .experience-art{
+    order:-1;
+    min-height:auto;
+  }
+
+  .experience-art img{
+    width:min(280px,75vw);
+    max-height:380px;
+  }
+
+  .timeline{
+    min-width:0;
+    padding-left:28px;
+  }
+
+  .tl-item{
+    padding-bottom:42px;
+  }
+
+  .tl-item::before{
+    left:-28px;
+  }
+
+  .tl-item h3{
+    font-size:19px;
+    line-height:1.3;
+  }
+
+  .tl-item ul{
+    font-size:14px;
+    line-height:1.7;
+  }
+
+
+  /* ---------- PROJECTS ---------- */
+
+  .projects-showcase{
+    width:100%;
+    min-width:0;
+  }
+
+  .projects-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .project-card{
+    min-width:0;
+    padding:22px;
+  }
+
+  .project-card.flagship{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+
+  .flagship-stats{
+    border-left:none;
+    border-top:1px solid var(--panel-line);
+    padding-left:0;
+    padding-top:20px;
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:18px 28px;
+  }
+
+  .flagship-stats b{
+    font-size:25px;
+  }
+
+  .project-doll{
+    width:150px;
+    top:-50px;
+    right:0;
+  }
+
+
+  /* ---------- CERTIFICATIONS / EDUCATION ---------- */
+
+  .split-two{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .list-row{
+    gap:12px;
+  }
+
+  .list-row > div:first-child{
+    min-width:0;
+  }
+
+  .list-row .l-title{
+    font-size:14px;
+    line-height:1.4;
+  }
+
+  .list-row .l-sub{
+    font-size:11px;
+    line-height:1.5;
+  }
+
+  .list-row .l-year{
+    font-size:11px;
+  }
+
+  .cert-edu-art img{
+    width:min(330px,78vw);
+  }
+
+
+  /* ---------- CONTACT ---------- */
+
+  .contact-showcase{
+    width:100%;
+    box-sizing:border-box;
+    min-height:auto;
+    padding-top:85px;
+    padding-bottom:50px;
+  }
+
+  .contact-copy{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+  }
+
+  .contact-section h2{
+    font-size:clamp(30px,8.5vw,44px);
+    line-height:1.12;
+  }
+
+  .contact-section p.lead{
+    width:100%;
+    max-width:480px;
+    padding:0 8px;
+    box-sizing:border-box;
+    font-size:14px;
+    line-height:1.65;
+  }
+
+  .contact-links{
+    width:100%;
+    margin-top:32px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+
+  .contact-links a{
+    width:100%;
+    min-height:48px;
+    justify-content:center;
+    box-sizing:border-box;
+    padding:13px 14px;
+    font-size:11px;
+    overflow-wrap:anywhere;
+    word-break:break-word;
+  }
+
+  /* Smaller and higher than the desktop character. */
+  .contact-doll{
+    left:0;
+    bottom:auto;
+    top:18px;
+    width:150px;
+    max-width:38vw;
+  }
+
+
+  /* ---------- VANI CHAT ---------- */
+
+  .chat-fab{
+    right:14px;
+    bottom:14px;
+    max-width:calc(100vw - 28px);
+    box-sizing:border-box;
+    padding:12px 15px 12px 13px;
+  }
+
+  .chat-fab span{
+    font-size:11px;
+  }
+
+  .vani-chat-panel{
+    right:12px;
+    bottom:76px;
+    width:calc(100vw - 24px);
+    max-width:none;
+    height:min(570px,calc(100vh - 100px));
+  }
+}
+
+
+/* ==================================================
+   EXTRA SMALL PHONES
+   ================================================== */
+
+@media (max-width:520px){
+
+  .container{
+    padding-left:14px;
+    padding-right:14px;
+  }
+
+  .nav-inner{
+    padding-left:14px;
+    padding-right:14px;
+  }
+
+  /* Hero */
+  .hero{
+    padding-top:82px;
+    padding-bottom:55px;
+  }
+
+  .hero-grid{
+    gap:28px;
+  }
+
+  .hero-kicker{
+    font-size:9px;
+    letter-spacing:.07em;
+  }
+
+  .hero h1{
+    font-size:clamp(38px,13vw,52px);
+  }
+
+  .hero-role{
+    font-size:14px;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+    align-items:stretch;
+    max-width:280px;
+  }
+
+  .btn{
+    width:100%;
+    justify-content:center;
+  }
+
+  .hero-stats{
+    gap:18px;
+  }
+
+  .hero-stat{
+    min-width:62px;
+  }
+
+  .hero-stat b{
+    font-size:23px;
+  }
+
+  .hero-stat span{
+    font-size:8px;
+  }
+
+
+  /* Track record */
+  .track-record-layout{
+    width:calc(100% - 28px);
+  }
+
+  .track-record-art img{
+    width:min(215px,72vw);
+  }
+
+  .reveal-heading{
+    margin-bottom:20px;
+  }
+
+  .reveal-card,
+  .reveal-card-inner,
+  .reveal-card-front,
+  .reveal-card-back{
+    min-height:165px;
+  }
+
+  .reveal-card-back{
+    padding:18px;
+  }
+
+  .reveal-card-back p{
+    font-size:13.5px;
+    line-height:1.58;
+  }
+
+
+  /* Skills */
+  .skills-cats{
+    grid-template-columns:1fr;
+  }
+
+  .skill-tag{
+    width:calc(50% - 4px);
+  }
+
+
+  /* Projects */
+  .project-card{
+    padding:18px;
+  }
+
+  .project-doll{
+    width:120px;
+    top:-40px;
+  }
+
+
+  /* Contact */
+  .contact-showcase{
+    padding-top:75px;
+  }
+
+  .contact-doll{
+    width:125px;
+    max-width:34vw;
+    top:12px;
+  }
+
+  .contact-section h2{
+    font-size:clamp(28px,9vw,38px);
+  }
+
+  .contact-section p.lead{
+    font-size:13px;
+  }
+
+  .contact-links a{
+    font-size:10.5px;
+  }
+
+
+  /* Vani */
+  .chat-fab{
+    right:10px;
+    bottom:10px;
+  }
+
+  .vani-chat-panel{
+    right:8px;
+    bottom:68px;
+    width:calc(100vw - 16px);
+  }
+}
+`;
 
 /* ---------------- LOADER (fully React-driven — no external <script>) ---------------- */
 function Loader({ onDone }) {

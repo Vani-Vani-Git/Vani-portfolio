@@ -1925,10 +1925,13 @@ function ChatFab({ open, setOpen }) {
         content: message
       }
     ]);
-
+    
     setInput("");
     setLoading(true);
+    
     const API_URL = import.meta.env.VITE_API_URL;
+    console.log("API_URL =", API_URL);
+    console.log("CHAT_URL =", `${API_URL}/api/chat`);
     try {
       const response = await fetch(`${API_URL}/api/chat`,
         {

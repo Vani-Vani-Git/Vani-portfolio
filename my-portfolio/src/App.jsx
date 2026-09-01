@@ -833,8 +833,8 @@ section{ position:relative; padding:120px 0; }
   position:absolute;
   z-index:2;
   left:10px;
-  bottom:200px;
-  width:min(225px,18vw);
+  bottom:100px;
+  width:min(150px,18vw);
   height:auto;
   object-fit:contain;
   pointer-events:none;

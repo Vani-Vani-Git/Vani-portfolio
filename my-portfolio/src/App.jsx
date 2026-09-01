@@ -1928,10 +1928,9 @@ function ChatFab({ open, setOpen }) {
 
     setInput("");
     setLoading(true);
-
+    const API_URL = import.meta.env.VITE_API_URL;
     try {
-      const response = await fetch(
-        "https://vani-personal-ai-backend.onrender.com",
+      const response = await fetch(`${API_URL}/api/chat`,
         {
           method: "POST",
           headers: {
